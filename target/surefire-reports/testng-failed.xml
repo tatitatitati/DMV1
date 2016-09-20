@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" verbose="0" name="Failed suite [Surefire suite]" parallel="classes">
+  <test name="Surefire test">
+    <classes>
+      <class name="com.redmine.tests.BasicTestCase"/>
+      <class name="com.redmine.tests.TestLogin"/>
+    </classes>
+  </test> <!-- Surefire test -->
+  <test name="Surefire test(failed)" parallel="classes">
+    <classes>
+      <class name="com.redmine.tests.TestLogin">
+        <methods>
+          <include name="testTextErrorTwoForm"/>
+        </methods>
+      </class> <!-- com.redmine.tests.TestLogin -->
+      <class name="com.redmine.tests.BasicTestCase">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.redmine.tests.BasicTestCase -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

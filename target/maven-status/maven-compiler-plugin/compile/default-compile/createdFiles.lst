@@ -1,0 +1,6 @@
+redmine\pages\TwoFormPage.class
+redmine\pages\HomePage.class
+redmine\utils\ConfigProperties.class
+redmine\data\UserData.class
+redmine\pages\Page.class
+redmine\pages\FirstFormPage.class
